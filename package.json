@@ -1,0 +1,40 @@
+{
+  "name": "agentsurely",
+  "version": "0.1.0",
+  "author": "Nguyễn Thị Liễu",
+  "private": true,
+  "description": "Performance bonds for ERC-8004 AI agents on Monad, verified by a Chainlink CRE workflow.",
+  "workspaces": [
+    "contracts",
+    "sdk",
+    "app"
+  ],
+  "scripts": {
+    "chain": "npm run node -w @agentsurely/contracts",
+    "deploy:local": "npm run deploy:local -w @agentsurely/contracts && npm run seed:local -w @agentsurely/contracts && npm run sync -w @agentsurely/sdk",
+    "preflight:monad": "npm run preflight -w @agentsurely/sdk -- --chain monad",
+    "deploy:monad": "npm run deploy:monad -w @agentsurely/contracts && npm run sync -w @agentsurely/sdk",
+    "seed:monad": "npm run seed:monad -w @agentsurely/contracts",
+    "forwarder:monad": "npm run forwarder:monad -w @agentsurely/contracts && npm run sync -w @agentsurely/sdk",
+    "judge:local": "npm run judge -w @agentsurely/sdk --",
+    "judge:monad": "npm run judge -w @agentsurely/sdk -- --chain monad",
+    "agent:demo": "npm run agent -w @agentsurely/sdk --",
+    "agent:monad": "npm run agent -w @agentsurely/sdk -- --chain monad",
+    "hire": "npm run hire -w @agentsurely/sdk --",
+    "eval:judge": "npm run eval -w @agentsurely/sdk --",
+    "dev": "npm run dev -w @agentsurely/app",
+    "build": "npm run build -w @agentsurely/app",
+    "test": "npm test -w @agentsurely/contracts && npm run typecheck -w @agentsurely/sdk && npm run catalog:selftest -w @agentsurely/sdk && npm run typecheck -w @agentsurely/app",
+    "deliver": "npm run deliver -w @agentsurely/sdk --",
+    "llm:check": "npm run llm:check -w @agentsurely/sdk --",
+    "catalog:register": "npm run catalog:register -w @agentsurely/sdk --",
+    "catalog:run": "npm run catalog:run -w @agentsurely/sdk --",
+    "catalog:selftest": "npm run catalog:selftest -w @agentsurely/sdk",
+    "catalog:demo": "npm run catalog:demo -w @agentsurely/sdk --",
+    "catalog:job": "npm run catalog:job -w @agentsurely/sdk --",
+    "upgrade03:monad": "npm run subs:monad -w @agentsurely/contracts && npm run sync -w @agentsurely/sdk",
+    "playbooks:monad": "npm run playbooks:monad -w @agentsurely/contracts && npm run sync -w @agentsurely/sdk && npm run playbooks:publish -w @agentsurely/sdk -- --chain monad",
+    "playbooks:publish": "npm run playbooks:publish -w @agentsurely/sdk --",
+    "jobs:monad": "npm run jobs:monad -w @agentsurely/contracts && npm run sync -w @agentsurely/sdk"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@agentsurely/sdk",
+  "version": "0.1.0",
+  "author": "Nguyễn Thị Liễu",
+  "private": true,
+  "description": "TypeScript SDK for AgentSurely — bond, hire and verify ERC-8004 agents on Monad.",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "sync": "tsx scripts/sync.ts",
+    "judge": "tsx scripts/local-judge.ts",
+    "agent": "tsx scripts/demo-agent.ts",
+    "hire": "tsx scripts/demo-hire.ts",
+    "typecheck": "tsc --noEmit",
+    "preflight": "tsx scripts/preflight.ts",
+    "eval": "tsx scripts/eval-judge.ts",
+    "deliver": "tsx scripts/deliver.ts",
+    "llm:check": "tsx scripts/llm-check.ts",
+    "catalog:register": "tsx scripts/catalog-register.ts",
+    "catalog:run": "tsx scripts/catalog-runner.ts",
+    "catalog:selftest": "tsx scripts/catalog-selftest.ts",
+    "catalog:demo": "tsx scripts/catalog-demo.ts",
+    "catalog:job": "tsx scripts/catalog-job.ts",
+    "playbooks:publish": "tsx scripts/playbooks-publish.ts"
+  },
+  "dependencies": {
+    "viem": "^2.30.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "dotenv": "^16.4.5",
+    "tsx": "^4.19.0",
+    "typescript": "~5.6.3"
+  }
+}

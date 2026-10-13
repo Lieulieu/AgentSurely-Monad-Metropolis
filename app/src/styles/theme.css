@@ -1,0 +1,42 @@
+/*
+ * AgentSurely design tokens — Chainlink-inspired.
+ * ──────────────────────────────────────────────────────────────────────────
+ * This is the ONLY file to edit to match docs/ui-style. Every Tailwind color,
+ * radius and font in the app reads these variables (see tailwind.config.ts).
+ * Values are space-separated RGB so Tailwind opacity modifiers work (bg-brand/10).
+ */
+:root {
+  /* Brand — Chainlink blue scale */
+  --brand: 55 91 210;          /* #375BD2 primary */
+  --brand-hover: 42 74 186;    /* #2A4ABA */
+  --brand-soft: 231 236 251;   /* #E7ECFB tints, selected rows */
+  --brand-bright: 106 140 255; /* #6A8CFF accents on dark */
+
+  /* Neutrals (light surfaces) */
+  --bg: 248 250 255;           /* #F8FAFF page */
+  --surface: 255 255 255;      /* cards */
+  --surface-2: 241 244 251;    /* inputs, table headers */
+  --line: 223 229 243;         /* #DFE5F3 borders */
+  --ink: 12 22 44;             /* #0C162C primary text */
+  --ink-2: 70 81 107;          /* #46516B secondary text */
+  --ink-3: 109 120 145;        /* #6D7891 muted */
+
+  /* Dark (hero, footer, code blocks) */
+  --night: 11 16 28;           /* #0B101C */
+  --night-2: 20 28 48;         /* #141C30 */
+  --night-line: 38 50 82;      /* #263252 */
+
+  /* Semantic */
+  --ok: 18 157 113;            /* #129D71 passed / paid */
+  --ok-soft: 224 246 238;
+  --bad: 217 45 58;            /* #D92D3A failed / slashed */
+  --bad-soft: 252 231 233;
+  --warn: 214 138 0;           /* #D68A00 pending verification */
+  --warn-soft: 255 243 214;
+
+  --radius: 12px;
+  --radius-sm: 8px;
+  --font-sans: "Inter Variable", "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --shadow-card: 0 1px 2px rgb(12 22 44 / 0.04), 0 4px 16px rgb(12 22 44 / 0.05);
+}

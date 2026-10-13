@@ -1,0 +1,25 @@
+node_modules
+.next
+.env
+.env.local
+contracts/artifacts
+contracts/cache
+contracts/typechain-types
+contracts/deployments/localhost.json
+cre/**/node_modules
+*.wasm
+next-env.d.ts
+*.tsbuildinfo
+logs/
+contracts/deployments/*.backup-*.json
+contracts/deployments/catalog/localhost.json
+__pycache__/
+
+# secrets: every .env variant except the examples
+.env.*
+!.env.example
+**/.env.*
+!**/.env.example
+# build / tool leftovers
+cre/**/.cre_build_tmp.js
+.vercel

@@ -1,0 +1,32 @@
+{
+  "name": "@agentsurely/contracts",
+  "version": "0.1.0",
+  "author": "Nguyễn Thị Liễu",
+  "private": true,
+  "scripts": {
+    "build": "hardhat compile",
+    "test": "hardhat test",
+    "node": "hardhat node",
+    "deploy:local": "hardhat run scripts/deploy.ts --network localhost",
+    "deploy:monad": "hardhat run scripts/deploy.ts --network monadTestnet",
+    "seed:local": "hardhat run scripts/seed.ts --network localhost",
+    "seed:monad": "hardhat run scripts/seed.ts --network monadTestnet",
+    "forwarder:monad": "hardhat run scripts/set-forwarder.ts --network monadTestnet",
+    "subs:monad": "hardhat run scripts/deploy-subs.ts --network monadTestnet",
+    "subs:local": "hardhat run scripts/deploy-subs.ts --network localhost",
+    "playbooks:monad": "hardhat run scripts/deploy-playbooks.ts --network monadTestnet",
+    "playbooks:local": "hardhat run scripts/deploy-playbooks.ts --network localhost",
+    "jobs:monad": "hardhat run scripts/deploy-jobboard.ts --network monadTestnet",
+    "jobs:local": "hardhat run scripts/deploy-jobboard.ts --network localhost"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.1.0",
+    "@types/node": "^22.20.5",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.26.0",
+    "solc": "^0.8.24",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.6.3"
+  }
+}

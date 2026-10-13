@@ -1,0 +1,12 @@
+{
+  "chainSelectorName": "monad-testnet",
+  "vaultAddress": "0x21E1928E6888cD5Fb51f25c8c6565a4cbe7BD49F",
+  "gasLimit": "900000",
+  "llm": {
+    "mode": "live",
+    "url": "https://api.anthropic.com/v1/messages",
+    "model": "claude-sonnet-5-5",
+    "api": "anthropic"
+  },
+  "scanWindow": 5
+}

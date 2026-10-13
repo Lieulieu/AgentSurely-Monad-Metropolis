@@ -1,0 +1,35 @@
+@import "@fontsource-variable/inter";
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/500.css";
+@import "./theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { -webkit-font-smoothing: antialiased; }
+  body { @apply bg-bg text-ink font-sans; font-feature-settings: "cv11", "ss01"; }
+  h1, h2, h3 { @apply tracking-tight text-ink; }
+  ::selection { @apply bg-brand/20; }
+}
+
+@layer components {
+  .page { @apply mx-auto w-full max-w-page px-4 sm:px-6; }
+  .card { @apply rounded border border-line bg-surface shadow-card; }
+  .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.12em] text-brand; }
+  .label { @apply mb-1.5 block text-sm font-medium text-ink-2; }
+  .input {
+    @apply w-full rounded-sm border border-line bg-surface px-3 py-2.5 text-sm text-ink outline-none transition
+           placeholder:text-ink-3 focus:border-brand focus:ring-4 focus:ring-brand/10;
+  }
+  .mono { @apply font-mono text-[0.8125rem]; }
+  /* Chainlink-style blueprint grid used on dark sections */
+  .grid-night {
+    background-color: rgb(var(--night));
+    background-image:
+      linear-gradient(rgb(var(--night-line) / 0.55) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(var(--night-line) / 0.55) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+}
